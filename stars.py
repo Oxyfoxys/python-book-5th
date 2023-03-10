@@ -2,7 +2,6 @@ import turtle
 
 
 def orion():
-    print('111')
     """
     Programme 2.25
     Эта программа наносит звезды созвездия Ориона,
