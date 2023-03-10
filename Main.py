@@ -184,7 +184,7 @@ print("Домашнее задание на завтра - прочитать \"
 # \\ печатает обратную косую черту
 
 '''
-2.10 
+2.10 (Вывод на экран форматированного результата с помощью f-строк)
 '''
 
 #Programme 2.20
@@ -200,3 +200,151 @@ print(f'Ежемесячный платеж составляет {monthly_paymen
 amount_due = 5000.0
 monthly_payment = amount_due / 12.0
 print(f'Ежемесячный платеж составляет {monthly_payment:.2f}.')
+
+#Programme 2.22
+# Эта программа демонстрирует вывод на экран
+# числа с плавающей точкой в качестве валюты.
+monthly_pay = 5000.0
+annual_pay = monthly_pay * 12
+print(f'Ваша годовая зарплата составляет ${annual_pay:,.2f}')
+
+#Programme 2.23
+# Эта программа выводит на экран следующие ниже числа
+# в двух столбцах.
+num1 = 127.899
+num2 = 3465.148
+num3 = 3.776
+num4 = 264.821
+num5 = 88.081
+num6 = 799.999
+
+#Каждое число выводится в поле из 10 знаков и
+# округляется до 2 знаков после точки.
+print(f'{num1:10.2f}{num2:10.2f}')
+print(f'{num3:10.2f}{num4:10.2f}')
+print(f'{num5:10.2f}{num6:10.2f}')
+
+#Programme 2.24
+# Эта программа демонстрирует выравнивание строковых литералов по центу
+name1 = 'Гордон'
+name2 = 'Смит'
+name3 = 'Вашингтон'
+name4 = 'Альварадо'
+name5 = 'Ливингстон'
+name6 = 'Джонс'
+
+# Вывод имен на экран
+print(f'***{name1:^20}***')
+print(f'***{name2:^20}***')
+print(f'***{name3:^20}***')
+print(f'***{name4:^20}***')
+print(f'***{name5:^20}***')
+print(f'***{name6:^20}***')
+
+'''
+2.12
+'''
+
+#Programme 2.25
+# Эта программа наносит звезды созвездия Ориона,
+# названия звезд и линии созвездия.
+import turtle
+
+# Задать размер окна.
+turtle.setup(500, 600)
+
+# Установить черепаху.
+turtle.penup()
+turtle.hideturtle()
+
+# Создать именованные константы для звездных координат.
+LEFT_SHOULDER_X = -70
+LEFT_SHOULDER_Y = 200
+
+RIGHT_SHOULDER_X = 80
+RIGHT_SHOULDER_Y = 180
+
+LEFT_BELTSTAR_X = -40
+LEFT_BELTSTAR_Y = -20
+
+MIDDLE_BELTSTAR_X = 0
+MIDDLE_BELTSTAR_Y = 0
+
+RIGHT_BELTSTAR_X = 40
+RIGHT_BELTSTAR_Y = 20
+
+LEFT_KNEE_X = -90
+LEFT_KNEE_Y = -180
+
+RIGHT_KNEE_X = 120
+RIGHT_KNEE_Y = -140
+
+# Нанести звезды.
+turtle.goto(LEFT_SHOULDER_X, LEFT_SHOULDER_Y)  # Левое плечо
+turtle.dot()
+turtle.goto(RIGHT_SHOULDER_X, RIGHT_SHOULDER_Y)  # Правое плечо
+turtle.dot()
+turtle.goto(LEFT_BELTSTAR_X, LEFT_BELTSTAR_Y)  # Левая звезда в поясе
+turtle.dot()
+turtle.goto(MIDDLE_BELTSTAR_X, MIDDLE_BELTSTAR_Y)  # Средняя звезда
+turtle.dot()
+turtle.goto(RIGHT_BELTSTAR_X, RIGHT_BELTSTAR_Y)  # Правая звезда
+turtle.dot()
+turtle.goto(LEFT_KNEE_X, LEFT_KNEE_Y)  # Левое колено
+turtle.dot()
+turtle.goto(RIGHT_KNEE_X, RIGHT_KNEE_Y)  # Правое колено
+turtle.dot()
+
+# Вывести названия звезд.
+turtle.goto(LEFT_SHOULDER_X, LEFT_SHOULDER_Y)
+turtle.write('Бетельгейзе')
+turtle.goto(RIGHT_SHOULDER_X, RIGHT_SHOULDER_Y)
+turtle.write('Хатиса')
+turtle.goto(LEFT_BELTSTAR_X, LEFT_BELTSTAR_Y)
+turtle.write('Альнитак')
+turtle.goto(MIDDLE_BELTSTAR_X, MIDDLE_BELTSTAR_Y)
+turtle.write('Альнилам')
+turtle.goto(RIGHT_BELTSTAR_X, RIGHT_BELTSTAR_Y)
+turtle.write('Минтака')
+turtle.goto(LEFT_KNEE_X, LEFT_KNEE_Y)
+turtle.write('Саиф')
+turtle.goto(RIGHT_KNEE_X, RIGHT_KNEE_Y)
+turtle.write('Ригель')
+
+# Нанести линию из левого плеча в левую звезду пояса
+turtle.goto(LEFT_SHOULDER_X, LEFT_SHOULDER_Y)
+turtle.pendown()
+turtle.goto(LEFT_BELTSTAR_X, LEFT_BELTSTAR_Y)
+turtle.penup()
+
+# Нанести линию из правого плеча в правую звезду пояса
+turtle.goto(RIGHT_SHOULDER_X, RIGHT_SHOULDER_Y)
+turtle.pendown()
+turtle.goto(RIGHT_BELTSTAR_X, RIGHT_BELTSTAR_Y)
+turtle.penup()
+
+# Нанести линию из левой звезды пояса в среднюю звезду пояса
+turtle.goto(LEFT_BELTSTAR_X, LEFT_BELTSTAR_Y)
+turtle.pendown()
+turtle.goto(MIDDLE_BELTSTAR_X, MIDDLE_BELTSTAR_Y)
+turtle.penup()
+
+# Нанести линию из средней звезды пояса в правую звезду пояса
+turtle.goto(MIDDLE_BELTSTAR_X, MIDDLE_BELTSTAR_Y)
+turtle.pendown()
+turtle.goto(RIGHT_BELTSTAR_X, RIGHT_BELTSTAR_Y)
+turtle.penup()
+
+# Нанести линию из левой звезды пояса в левое колено
+turtle.goto(LEFT_BELTSTAR_X, LEFT_BELTSTAR_Y)
+turtle.pendown()
+turtle.goto(LEFT_KNEE_X, LEFT_KNEE_Y)
+turtle.penup()
+
+# Нанести линию из правой звезды пояса в правое колено
+turtle.goto(RIGHT_BELTSTAR_X, RIGHT_BELTSTAR_Y)
+turtle.pendown()
+turtle.goto(RIGHT_KNEE_X, RIGHT_KNEE_Y)
+
+# Оставить окно открытым
+turtle.done()
