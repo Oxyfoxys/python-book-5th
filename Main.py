@@ -252,4 +252,5 @@ def other():
 
 
 if __name__ == '__main__':
+    print(orion.__doc__)
     orion()
