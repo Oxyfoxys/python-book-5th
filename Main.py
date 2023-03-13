@@ -260,8 +260,7 @@ if __name__ == '__main__':
 '''
 simulator chapter 2
 '''
-
-#1
+ #1
 height = int(input('Введите свой рост: '))
 
 #2
@@ -323,3 +322,17 @@ print('Джордж', 'Джон', 'Пол', 'Ринго', sep='@')
 turtle.circle(75)
 
 #14
+import turtle
+turtle.hideturtle()
+turtle.fillcolor('blue')
+turtle.begin_fill()
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.end_fill()
+
+#155
