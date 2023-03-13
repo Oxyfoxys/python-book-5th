@@ -1,3 +1,4 @@
+import turtle
 
 from stars import orion
 
@@ -291,10 +292,34 @@ print(result1, result2, result3, result4, result5)
 total = 10 + 14
 
 #6
-due = total - down_payment
+#due = total - down_payment
 
 #7
-total = subtotal * 0.15
+#total = subtotal * 0.15
 
 #8
+a = 5
+b = 2
+c = 3
+result = a + b * c
+print(result)
 
+#9
+num = 99
+num = 5
+print(num)
+
+#10
+#print(format(sales, '.2f))
+
+#11
+number = 1234567.456
+print(format(number, ',.1f'))
+
+#12
+print('Джордж', 'Джон', 'Пол', 'Ринго', sep='@')
+
+#13
+turtle.circle(75)
+
+#14
