@@ -319,7 +319,7 @@ print(format(number, ',.1f'))
 print('Джордж', 'Джон', 'Пол', 'Ринго', sep='@')
 
 #13
-turtle.circle(75)
+#turtle.circle(75)
 
 #14
 '''
@@ -359,3 +359,31 @@ turtle.begin_fill()
 turtle.circle(80)
 turtle.end_fill()
 '''
+
+'''
+exercise
+'''
+#1
+print('Aleks lutic')
+print('Эшвиль, Северная Каролина 28899')
+print('89234657823')
+print('профильная')
+
+#2
+total_amount =float(input('Введите сумму общего объема продаж:'))
+pta = 0.23 #процент от общей суммы
+sn = total_amount / 100 * pta
+print(sn)
+
+#3
+total_number = float(input('Введите общее количество квадратных метров:'))
+ackr = 4046.86
+na = total_number / 4047 * ackr
+print(na)
+
+#4
+speed = 70
+distance = speed * 6
+distance2 = speed * 10
+distance3 = speed * 15
+print(distance, distance2, distance3)
