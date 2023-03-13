@@ -254,3 +254,47 @@ def other():
 if __name__ == '__main__':
     print(orion.__doc__)
     orion()
+
+
+'''
+simulator chapter 2
+'''
+
+#1
+height = int(input('Введите свой рост: '))
+
+#2
+color = input('Введите свой любимый цвет: ')
+
+#3
+'''
+b = a + 2
+a = b * 4
+b = a / 3.14
+a = b - 8
+'''
+
+#4
+w = 5
+x = 4
+y = 8
+z = 2
+
+result1 = x+y
+result2 = z*2
+result3 = y/x
+result4 = y-z
+result5 = w//z
+print(result1, result2, result3, result4, result5)
+
+#5
+total = 10 + 14
+
+#6
+due = total - down_payment
+
+#7
+total = subtotal * 0.15
+
+#8
+
