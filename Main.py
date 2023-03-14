@@ -433,3 +433,28 @@ kilometers_per_litre = kilometers / litres
 print('Вы использовали', format(kilometers_per_litre, '.2f'), 'литров на километр')
 
 #8
+TAX_RATE = 0.07  #налоговая ставка
+TIP_RATE = 0.18  #ставка чаевых
+
+food = float(input('Введите стоимость еды: '))
+
+tip = food * TIP_RATE
+
+tax = food * TAX_RATE
+
+total = food + tip + tax  #итоговая сумма
+
+print('Чаевые: $', format(tip, '.2f'))
+print('Налог: $', format(tax, '.2f'))
+print('Итоговая сумма: $', format(total, '.2f'))
+
+#9
+celsius = float(input('Введите температуру по шкале Цельсия: '))
+
+fahrenheit = (9 / 5) * celsius + 32
+
+print('Она равна', format(fahrenheit, '.2f'), 'градусам по Фаренгейту')
+
+#10
+
+
