@@ -401,12 +401,22 @@ total = subTotal + salesTax
 print('sub total: ',format(subTotal , ',.2f'))
 print('sales tax: ',format(salesTax , ',.2f'))
 
-
-
-
 #5
 speed = 70
 distance = speed * 6
 distance2 = speed * 10
 distance3 = speed * 15
 print(distance, distance2, distance3)
+
+#6
+amount = float(input("Введите общую сумму покупки: "))
+
+federal_tax = amount * 0.05
+regional_tax = amount * 0.025
+
+totalSale = ( amount + federal_tax + regional_tax )
+
+print('Сумма покупки :',format(amount, ',.2f'))
+print('Сумма федерального налога с продажи: ',format(federal_tax , ',.2f'))
+print('Сумма регионального налога с продажи: ',format(regional_tax , ',.2f'))
+print('Итоговая сумма :',format(totalSale,',.2f'))
