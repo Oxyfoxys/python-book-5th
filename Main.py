@@ -456,5 +456,24 @@ fahrenheit = (9 / 5) * celsius + 32
 print('Она равна', format(fahrenheit, '.2f'), 'градусам по Фаренгейту')
 
 #10
+COOKIES_RECIPE = 48
+SUGAR_RECIPE = 1.5
+BUTTER_RECIPE = 1
+FLOUR_RECIPE = 2.75
+
+cookies = float(input("Введите количество булочек: "))   #количество булочек
+
+sugar = (cookies * SUGAR_RECIPE) / COOKIES_RECIPE  #стаканы воды
+
+butter = (cookies * BUTTER_RECIPE) / COOKIES_RECIPE  #стаканы масла
+
+flour = (cookies * FLOUR_RECIPE) / COOKIES_RECIPE  #стаканы муки
+
+print("Чтобы изготовить", cookies, "булочек, вам понадобятся:")
+print(format(sugar, '.2f'), "стаканов сахара")
+print(format(butter, '.2f'), "стаканов масла")
+print(format(flour, '.2f'), "стаканов муки")
+
+#11
 
 
