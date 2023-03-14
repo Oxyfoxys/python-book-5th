@@ -382,6 +382,29 @@ na = total_number / 4047 * ackr
 print(na)
 
 #4
+product1 = float(input('Введите цену товара 1: '))
+
+product2 = float(input('Введите цену товара 2: '))
+
+product3 = float(input('Введите цену товара 3: '))
+
+product4 = float(input('Введите цену товара 4: '))
+
+product5 = float(input('Введите цену товара 5: '))
+
+subTotal = (product1 + product2 + product3 + product4 + product5)
+
+salesTax = subTotal * 0.07
+
+total = subTotal + salesTax
+
+print('sub total: ',format(subTotal , ',.2f'))
+print('sales tax: ',format(salesTax , ',.2f'))
+
+
+
+
+#5
 speed = 70
 distance = speed * 6
 distance2 = speed * 10
