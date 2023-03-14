@@ -420,3 +420,16 @@ print('Сумма покупки :',format(amount, ',.2f'))
 print('Сумма федерального налога с продажи: ',format(federal_tax , ',.2f'))
 print('Сумма регионального налога с продажи: ',format(regional_tax , ',.2f'))
 print('Итоговая сумма :',format(totalSale,',.2f'))
+
+#7
+#расход = пройденные километры / расход бензина в литрах
+# kilometers_per_litre = kilometers / litres
+kilometers = float(input('Введите пройденные километры: '))
+
+litres = float(input('Введите литры потребленного топлива: '))
+
+kilometers_per_litre = kilometers / litres
+
+print('Вы использовали', format(kilometers_per_litre, '.2f'), 'литров на километр')
+
+#8
