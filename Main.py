@@ -509,7 +509,7 @@ totalPaid = amountPaidForStock + purchaseCommission  # Вычислить общ
 
 stockSoldFor = NUM_SHARES * SELLING_PRICE   # Вычислить сумму, за которую Джо продал акции.
 
-sellingCommission = COMMISSION_RATE * stockSoldFor
+sellingCommission = COMMISSION_RATE * stockSoldFor  # Вычислить сумму комиссии, которую Джо уплатил брокеру
 
 totalReceived = stockSoldFor - sellingCommission  # Вычислить сумму денег, оставшихся после того, как Джо заплатил брокеру
 
@@ -534,3 +534,24 @@ S = float(input())
 V = (R - 2 * E) / S
 
 print('У вас достаточно места для', V, 'виноградных лоз.')
+
+#14
+print('Введите начальный остаток основного счета: ', end='')
+P = float(input())
+
+print('Введите годовую ставку процента: ', end='')
+r = float(input())
+
+print('Сколько раз в году начисляется сложный процентный доход? ', end='')
+n = int(input())
+
+print('Сколько лет этот счет будет получать процентные начисления? ', end='')
+t = int(input())
+
+r = r / 100
+
+A = P * (1 + float(r) / n) ** (n * t)
+
+print('В конце периода из', t, 'лет у вас будет $', format(a, ',.2f'))
+
+#15
