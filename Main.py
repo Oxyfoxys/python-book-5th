@@ -555,3 +555,34 @@ A = P * (1 + float(r) / n) ** (n * t)
 print('В конце периода из', t, 'лет у вас будет $', format(a, ',.2f'))
 
 #15
+#1
+'''
+import turtle
+
+turtle.hideturtle()
+
+turtle.fillcolor('red')
+# romb1
+turtle.begin_fill()
+turtle.left(135)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.end_fill()
+# romb2
+turtle.begin_fill()
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(100)
+turtle.end_fill()
+'''
+
+#2
