@@ -586,3 +586,88 @@ turtle.end_fill()
 '''
 
 #2
+'''
+import turtle
+
+OUTER_TOP_X = 0
+OUTER_TOP_Y = 200
+INNER_TOP_X = OUTER_TOP_X
+INNER_TOP_Y = OUTER_TOP_Y / 2
+BASE_LEFT_X = -100
+BASE_LEFT_Y = 0
+BASE_RIGHT_X = 100
+BASE_RIGHT_Y = 0
+
+turtle.hideturtle()
+turtle.penup()
+
+turtle.goto(BASE_RIGHT_X, BASE_RIGHT_Y)
+
+turtle.fillcolor('red')
+turtle.pendown()
+
+#внешний треугольник.
+turtle.goto(OUTER_TOP_X, OUTER_TOP_Y)
+turtle.goto(BASE_LEFT_X, BASE_LEFT_Y)
+turtle.goto(BASE_RIGHT_X, BASE_RIGHT_Y)
+
+#внутренний треугольник
+turtle.begin_fill()
+turtle.goto(INNER_TOP_X, INNER_TOP_Y)
+turtle.goto(BASE_LEFT_X, BASE_LEFT_Y)
+turtle.goto(BASE_RIGHT_X, BASE_RIGHT_Y)
+turtle.end_fill()
+'''
+
+#3
+
+#4
+'''
+import turtle
+
+RADIUS = 100
+STARTING_POINT_X = -250
+STARTING_POINT_Y = 0
+HSHIFT = 125
+VSHIFT = 100
+
+# Начертить круг #1
+x = STARTING_POINT_X
+y = STARTING_POINT_Y
+turtle.penup()
+turtle.goto(x, y)
+turtle.pendown()
+turtle.circle(RADIUS)
+
+# Начертить круг #2
+x += HSHIFT
+y -= VSHIFT
+turtle.penup()
+turtle.goto(x, y)
+turtle.pendown()
+turtle.circle(RADIUS)
+
+# Начертить круг #3
+x += HSHIFT
+y = 0
+turtle.penup()
+turtle.goto(x, y)
+turtle.pendown()
+turtle.circle(RADIUS)
+
+# Начертить круг #4
+x += HSHIFT
+y -= VSHIFT
+turtle.penup()
+turtle.goto(x, y)
+turtle.pendown()
+turtle.circle(RADIUS)
+
+# Начертить круг #5
+x += HSHIFT
+y = 0
+turtle.penup()
+turtle.goto(x, y)
+turtle.pendown()
+turtle.circle(RADIUS)
+'''
