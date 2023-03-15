@@ -475,5 +475,10 @@ print(format(butter, '.2f'), "стаканов масла")
 print(format(flour, '.2f'), "стаканов муки")
 
 #11
-
-
+men = int(input('Введите количество учащихся мужского пола: '))
+women = int(input('Введите количество учащихся женского пола: '))
+total = men + women
+percentMen = men / total
+percentWomen = women / total
+print('Юноши: ', format(percentMen, '.2f'), '%')
+print('Девушки: ', format(percentWomen, '.2f'), '%')
