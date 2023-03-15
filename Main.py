@@ -477,8 +477,47 @@ print(format(flour, '.2f'), "стаканов муки")
 #11
 men = int(input('Введите количество учащихся мужского пола: '))
 women = int(input('Введите количество учащихся женского пола: '))
+
 total = men + women
+
 percentMen = men / total
+
 percentWomen = women / total
+
 print('Юноши: ', format(percentMen, '.2f'), '%')
 print('Девушки: ', format(percentWomen, '.2f'), '%')
+
+#12
+COMMISSION_RATE = 0.03
+NUM_SHARES = 2000
+PURCHASE_PRICE = 40.0
+SELLING_PRICE = 42.75
+
+amountPaidForStock = 0.0  # Сумма, выплаченная за акции
+purchaseCommission = 0.0  # Комиссия, уплаченная за покупку акций
+totalPaid = 0.0           # Итоговая уплаченная сумма
+stockSoldFor = 0.0        # Сумма, за которую акции были проданы
+sellingCommission = 0.0   # Комиссия, уплаченная за продажу акций
+totalReceived = 0.0       # Итоговая полученная сумма
+profitOrLoss = 0.0        # Сумма дохода или убытка
+
+amountPaidForStock = NUM_SHARES * PURCHASE_PRICE   # Вычислить сумму, которую Джо уплатил за акции, не включая комиссию.
+
+purchaseCommission = COMMISSION_RATE * amountPaidForStock  # Вычислить сумму комиссию, которую Джо уплатил брокеру при покупке акций.
+
+totalPaid = amountPaidForStock + purchaseCommission  # Вычислить общую сумму, которую Джо уплатил
+
+stockSoldFor = NUM_SHARES * SELLING_PRICE   # Вычислить сумму, за которую Джо продал акции.
+
+sellingCommission = COMMISSION_RATE * stockSoldFor
+
+totalReceived = stockSoldFor - sellingCommission  # Вычислить сумму денег, оставшихся после того, как Джо заплатил брокеру
+
+profitOrLoss = totalReceived - totalPaid   # Вычислить сумму дохода или убытка
+
+print('Сумма, уплаченная за акции: $', format(amountPaidForStock, '.2f'))
+print('Комиссия, уплаченная при покупке: $', format(purchaseCommission, '.2f'))
+print('Сумма, вырученная от продажи акций: $', format(stockSoldFor, '.2f'))
+print('Комиссия, уплаченная при продаже: $', format(sellingCommission, '.2f'))
+print('Доход (или убыток, если число отрицательное): $', format(profitOrLoss, '.2f'))
+
