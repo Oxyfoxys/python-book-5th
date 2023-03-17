@@ -1,4 +1,7 @@
 def task_1():
+    '''
+    Пример ввода текста
+    '''
     print('Aleks lutic')
     print('Эшвиль, Северная Каролина 28899')
     print('89234657823')
@@ -189,7 +192,7 @@ def task_13():
 
 def task_14():
     print('Введите начальный остаток основного счета: ', end='')
-    P = float(input())
+    p = float(input())
 
     print('Введите годовую ставку процента: ', end='')
     r = float(input())
@@ -202,10 +205,24 @@ def task_14():
 
     r = r / 100
 
-    A = P * (1 + float(r) / n) ** (n * t)
+    a = p * (1 + float(r) / n) ** (n * t)
 
     print('В конце периода из', t, 'лет у вас будет $', format(a, ',.2f'))
 
 
 if __name__ == '__main__':
-    task_12()
+    print(task_1.__doc__)
+    task_1()
+    # task_2()
+    # task_3()
+    # task_4()
+    # task_5()
+    # task_6()
+    # task_7()
+    # task_8()
+    # task_9()
+    # task_10()
+    # task_11()
+    # task_12()
+    # task_13()
+    # task_14()
