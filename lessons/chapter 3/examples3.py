@@ -240,5 +240,44 @@ WEST = 180
 
 turtle.setup(SCREEN_WIDTH, SCREEN_HEIGHT)
 
+turtle.hideturtle()
+turtle.speed(0)
+turtle.penup()
+turtle.goto(TARGET_LLEFT_X, TARGET_LLEFT_Y)
+turtle.pendown()
+turtle.setheading(EAST)
+turtle.forward(TARGET_WIDTH)
+turtle.setheading(NORTH)
+turtle.forward(TARGET_WIDTH)
+turtle.setheading(WEST)
+turtle.forward(TARGET_WIDTH)
+turtle.setheading(SOUTH)
+turtle.forward(TARGET_WIDTH)
+turtle.penup()
+
+turtle.goto(0, 0)
+turtle.setheading(EAST)
+turtle.showturtle()
+turtle.speed(PROJECTILE_SPEED)
+
+angle = float(input("Введите угол выстрела снаряда: "))
+force = float(input("Введите пусковую(1-10): "))
+
+distance = force * FORCE_FACTOR
+
+turtle.setheading(angle)
+
+turtle.pendown()
+turtle.forward(distance)
+
+if (turtle.xcor() >= TARGET_LLEFT_X and
+    turtle.xcor() <= (TARGET_LLEFT_X + TARGET_WIDTH) and
+    turtle.ycor() >= TARGET_LLEFT_Y and
+    turtle.ycor() <= (TARGET_LLEFT_Y + TARGET_WIDTH)):
+        print('Цель поражена!')
+else:
+        print('Вы промахнулись')
+
+
 
 
