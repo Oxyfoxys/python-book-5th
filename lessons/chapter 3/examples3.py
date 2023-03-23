@@ -117,8 +117,8 @@ Programme 3.5
 клиент требованиям банка на получение ссуды.
 '''
 
-MIN_SALARY = 30000.0  #
-MIN_YEARS = 2    #
+MIN_SALARY = 30000.0  #Минимально допустимая годовая зарплата
+MIN_YEARS = 2    #Минимально допустимый стаж на текущем месте работы
 
 # Получить размер годовой заработной платы клиента.
 salary = float(input('Введите свой годовой доход: '))
@@ -190,7 +190,55 @@ salary = float(input('Введите свой годовой доход: '))
 years_on_job = int(input('Введите количество лет' + 'рабочего стажа: '))
 
 #Определить, удовлетворяет ли клиент требованиям
-if salary >= MIN_SALARY and years_on_job >= MIN_YEARS:   # можно написать or
+if salary >= MIN_SALARY and years_on_job >= MIN_YEARS:
     print('Ваша ссуда одобрена')
 else:
     print('Ваша ссуда не одобрена')
+
+'''
+Programme 3.8
+Эта программа определяет, удовлетворяет ли
+клиент требованием банка на получение ссуды
+'''
+
+MIN_SALARY = 30000.0
+MIN_YEARS = 2
+
+#Получить размер годового дохода клиента
+salary = float(input('Введите свой годовой доход: '))
+
+#Получить количество лет на текущем месте работы
+years_on_job = int(input('Введите количество лет' + 'рабочего стажа: '))
+
+#Определить, удовлетворяет ли клиент требованиям
+if salary >= MIN_SALARY or years_on_job >= MIN_YEARS:
+    print('Ваша ссуда одобрена')
+else:
+    print('Ваша ссуда не одобрена')
+
+'''
+3.7 Черепашья графика: определение состояния черепахи
+'''
+
+'''
+Programme 3.9
+Игра "Порази цель"
+'''
+import turtle
+
+SCREEN_WIDTH = 600
+SCREEN_HEIGHT = 600
+TARGET_LLEFT_X = 100
+TARGET_LLEFT_Y = 250
+TARGET_WIDTH = 25
+FORCE_FACTOR = 30
+PROJECTILE_SPEED = 1
+NORTH = 90
+SOUTH = 270
+EAST = 0
+WEST = 180
+
+turtle.setup(SCREEN_WIDTH, SCREEN_HEIGHT)
+
+
+
