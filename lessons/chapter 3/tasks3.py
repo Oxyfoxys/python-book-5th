@@ -297,3 +297,167 @@ print('Количество оставшихся сосисок:', dogsLeft)
 
 # Показать количество оставшихся булочек для хот-догов.
 print('Количество оставшихся булочек:', bunsLeft)
+
+#9
+
+# Локальные переменные
+pocketNum = 0
+outputStr = ''
+
+# Получить от пользователя количество карманов.
+pocketNum = int(input('Введите количество карманов от 0 до 36: '))
+
+# Определить, является ли номер кармана допустимым.
+if pocketNum < 0 or pocketNum > 36:
+    outputStr = 'Ошибка: введено недопустимое значение'
+
+# Определить цвет номера кормана.
+else:
+    # Для карманов с 1 по 10, карманы с нечетными номерами -
+    # красные, а карманы с четными номерами - черные.
+    if pocketNum >= 1 and pocketNum <= 10:
+        if pocketNum % 2:
+            outputStr = 'Черный'  # Четный
+        else:
+            outputStr = 'Красный'  # Нечетный
+
+    # Для карманов с  11 по 18, карманы с нечетными номерами -
+    # черные, а карманы с четными номерами - красные.
+    elif pocketNum >= 11 and pocketNum <= 18:
+        if pocketNum % 2:
+            outputStr = 'Красный'  # Четный
+        else:
+            outputStr = 'Черный'  # Нечетный
+
+    # Для карманов с 19 по 28, карманы с нечетными номерами -
+    # красные, а карманы с четными номерами - черные.
+    elif pocketNum >= 19 and pocketNum <= 28:
+        if pocketNum % 2:
+            outputStr = 'Черный'  # Четный
+        else:
+            outputStr = 'Красный'  # Нечетный
+
+    # Для карманов с 29 по 36, карманы с нечетными номерами -
+    # черные, а карманы с четными номерами - красные.
+    elif pocketNum >= 29 and pocketNum <= 36:
+        if pocketNum % 2:
+            outputStr = 'Красный'  # Четный
+        else:
+            outputStr = 'Черный'  # Нечетный
+
+    # Карман 0 - зеленый.
+    else:
+        outputStr = 'Зеленый'  # Зеро (ноль)
+
+# Показать результат.
+print(outputStr)
+
+#10
+
+# Глобальные переменные
+COIN5_VALUE = 5
+COIN10_VALUE = 10
+COIN50_VALUE = 50
+KOPECKS_IN_ROUBLE = 100
+
+# Локальные переменные
+coin5 = 0
+coin10 = 0
+coin50 = 0
+totalValue = 0.0
+totalRoubles = 0.0
+
+# Получить от пользователей количество
+# монет достоинством 5, 10 и 50.
+coin5 = int(input('Введите количество монет достоинством 5 коп.: '))
+coin10 = int(input('Введите количество монет достоинством 10 коп.: '))
+coin50 = int(input('Введите количество монет достоинством 50 коп.: '))
+
+# Сумма монет достоинством 5, 10 и 50 копеек
+# для получения общей суммы в копейках.
+totalValue = (coin5 * COIN5_VALUE) + \
+             (coin10 * COIN10_VALUE)+ \
+             (coin50 * COIN50_VALUE)
+
+# Вычислить общее количество рублей
+totalRoubles = totalValue / KOPECKS_IN_ROUBLE
+
+# Определить, выиграл ли пользователь игру:
+if totalRoubles > 1.0:
+    # Сумма была больше одного рубля.
+    print('Извините, введенная вами сумма больше одного рубля.')
+elif totalRoubles < 1.0:
+    # Сумма была меньше одного рубля.
+    print('Извините, введенная вами сумма меньше одного рубля.')
+else:
+    # Сумма была равна ровно одному рублю.
+    print('Поздравляем!')
+    print('Сумма, которую вы ввели, равняется ровно одному рублю!')
+    print('Вы выиграли!')
+
+
+#11
+
+# Локальные переменные
+number = 0
+points = 0
+
+# Получить количество книг, приобретенных пользователем.
+number = int(input('Введите количество приобретенных книг: '))
+
+# Определить количество заработанных очков.
+if number == 2:
+    points = 5
+elif number <= 4:
+    points = 15
+elif number <= 6:
+    points = 30
+elif number >= 7:
+    points = 60
+else:
+    points = 0
+
+# Показать количество заработанных очков.
+print('Вы приобрели', number, 'книг.')
+print('В результате вы заработали', points, 'очков.')
+
+
+#12
+
+# Именованная константа
+RETAIL_PRICE = 99
+
+# Локальные переменные
+quantity = 0
+fullPrice = 0.0
+discountRate = 0.0
+discountAmount = 0.0
+totalAmount = 0.0
+
+# Получить количество
+quantity = int(input('Введите количество приобретенных пакетов: '))
+
+# Вычислить скидочную ставку
+if quantity > 99:
+    discountRate = 0.40
+elif quantity > 49:
+    discountRate = 0.30
+elif quantity > 19:
+    discountRate = 0.20
+elif quantity > 9:
+    discountRate = 0.10
+else:
+    discountRate = 0
+
+# Вычислить полную цену
+fullPrice = quantity * RETAIL_PRICE
+
+# Вычислить сумму скидки
+discountAmount = fullPrice * discountRate
+
+# Вычислить общую сумму
+totalAmount = fullPrice - discountAmount
+
+# Напечатать результаты
+print ('Сумма скидки: $', format(discountAmount, '.2f'))
+print ('Общая сумма: $', format(totalAmount, '.2f'))
