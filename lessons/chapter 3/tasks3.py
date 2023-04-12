@@ -461,3 +461,95 @@ totalAmount = fullPrice - discountAmount
 # Напечатать результаты
 print ('Сумма скидки: $', format(discountAmount, '.2f'))
 print ('Общая сумма: $', format(totalAmount, '.2f'))
+
+
+#13
+
+# Локальные переменные
+weight = 0.0
+shippingCost = 0.0
+
+# Получить от пользователя вес пакета.
+weight = float(input('Введите вес пакета в граммах: '))
+
+# Вычислить стоимость доставки.
+if weight > 1000:
+    shippingCost = 475
+elif weight > 600:
+    shippingCost = 400
+elif weight > 200:
+    shippingCost = 300
+else:
+    shippingCost = 150
+
+# Показать стоимость доставки.
+print ('Стоимость доставки в рублях: $', format(shippingCost, '.2f'))
+
+
+#14
+
+# Локальные переменные
+weight = 0.0
+height = 0.0
+IMT = 0.0    # индекс массы тела - ИМТ
+
+# Получить от пользователя вес.
+weight = float(input('Введите свою массу тела в килограммах: '))
+
+# Получить от пользователя рост.
+height = float(input('Введите свой рост в метрах: '))
+
+# Вычислить массу тела.
+IMT = weight / (height * height)
+
+# Показать ИМТ.
+print('Ваш индекс массы тела равняется', format(IMT, '.2f'))
+
+# Определить и показать весовую категорию.
+if IMT > 25:
+    print('Вы весите выше нормы.')
+elif IMT < 18.5:
+    print('Вы весите ниже нормы.')
+else:
+    print('Ваш вес оптимален.')
+
+
+#15
+
+# Локальные переменные
+days = 0
+hours = 0
+minutes = 0
+seconds = 0
+dayRemainder = 0
+hourRemainder = 0
+minuteRemainder = 0
+
+# Получить от пользователя количество секунд.
+seconds = int(input('Введите количество секунд: '))
+
+# Получить от пользователя количество дней.
+if seconds >= 86400:
+    days = seconds // 86400
+    dayRemainder = seconds % 86400
+
+# Вычислить часы.
+if seconds >= 3600:
+    hours = seconds // 3600
+    hourRemainder = seconds % 3600
+
+# Вычислить минуты.
+if seconds >= 60:
+    minutes = seconds // 60
+    minuteRemainder = seconds % 60
+
+# Показать дни, часы, минуты, секунды.
+if minutes == 0:
+    print('Количество секунд менее одной минуты.')
+else:
+    print(seconds, 'секунд равняется:')
+    print(minutes, 'полным минутам и', minuteRemainder, 'секундам.')
+    if hours != 0:
+        print(hours, 'полным часам и', hourRemainder, 'секундам.')
+    if days != 0:
+        print(days, 'полным дням и', dayRemainder, 'секундам.')
