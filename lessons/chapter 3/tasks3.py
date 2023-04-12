@@ -553,3 +553,172 @@ else:
         print(hours, 'полным часам и', hourRemainder, 'секундам.')
     if days != 0:
         print(days, 'полным дням и', dayRemainder, 'секундам.')
+
+
+#16
+
+# Эта программа определяет количество дней в
+# феврале для того или иного года.
+
+print('Введите год: ', end='')
+year = int(input())
+if year % 100 == 0:
+    if year % 400 == 0:
+        leap_year = True
+    else:
+        leap_year = False
+else:
+    if year % 4 == 0:
+        leap_year = True
+    else:
+        leap_year = False
+if leap_year:
+    print('Это високосный год. В феврале 29 дней.')
+else:
+    print('Это не високосный год. В феврале 28 дней.')
+
+
+#17
+
+# Эта программа проводит вас через процесс отладки
+# плохого Wi-Fi-соединения.
+
+print('Перезагрузите компьютер и попробуйте подключиться.')
+print('Вы исправили проблему?')
+response = input()
+if response == 'да':
+    print('Рад был помочь.')
+else:
+    print('Перезагрузите маршрутизатор и попробуйте подключиться.')
+    print('Вы исправили проблему?')
+    response = input()
+    if response == 'да':
+        print('Рад был помочь.')
+    else:
+        print('Убедитесь, что кабели между маршрутизатором и модемом прочно подсоединены.')
+        print('Вы исправили проблему?')
+        response = input()
+        if response == 'да':
+            print('Рад был помочь.')
+        else:
+            print('Переместите маршрутизатор на новое место.')
+            print('Вы исправили проблему?')
+            response = input()
+            if response == 'да':
+                print('Рад был помочь.')
+            else:
+                print('Возьмите новый маршрутизатор.')
+
+
+#18
+
+# Эта программа помогает вам выбрать ресторан.
+
+# Инициализировать переменные
+vegetarian = False
+vegan = False
+glutenFree = False
+
+# Есть вегетариантцы?
+print('Есть ли в группе людей вегетарианец? ', end='')
+response = input()
+if response == 'да':
+    vegetarian = True
+
+# Есть веганцы?
+print('Есть ли в группе людей веганец? ', end='')
+response = input()
+if response == 'да':
+    vegan = True
+
+# Есть приверженцы безглютеновой диеты?
+print('Есть ли в группе людей приверженец безглютеновой диеты? ', end='')
+response = input()
+if response == 'да':
+    glutenFree = True
+
+# Показать варианты ресторанов.
+print('Вот варианты ресторанов:')
+if not vegetarian and not vegan and not glutenFree:
+    print("Изысканные гамбургеры от Джо")
+if not vegan and not glutenFree:
+    print("Блюда от итальянской мамы")
+if not vegan:
+    print('Центральная пиццерия')
+print('Кафе за углом')
+print("Кухня шеф-повара")
+
+#19
+
+import turtle
+
+# Именованные константы
+SCREEN_WIDTH = 600  # Ширина экрана
+SCREEN_HEIGHT = 600  # Высота экрана
+TARGET_LLEFT_X = 100  # Левая нижняя координата X цели
+TARGET_LLEFT_Y = 250  # Левая нижняя координата Y цели
+TARGET_WIDTH = 25  # Ширина цели
+FORCE_FACTOR = 30  # Фактор произвольной силы
+PROJECTILE_SPEED = 1  # Скорость анимации снаряда
+NORTH = 90  # Угол северного направления
+SOUTH = 270  # Угол южного направления
+EAST = 0  # Угол восточного направления
+WEST = 180  # Угол западного направления
+
+# Настроить окно.
+turtle.setup(SCREEN_WIDTH, SCREEN_HEIGHT)
+
+# Нарисовать цель.
+turtle.hideturtle()
+turtle.speed(0)
+turtle.penup()
+turtle.goto(TARGET_LLEFT_X, TARGET_LLEFT_Y)
+turtle.pendown()
+turtle.setheading(EAST)
+turtle.forward(TARGET_WIDTH)
+turtle.setheading(NORTH)
+turtle.forward(TARGET_WIDTH)
+turtle.setheading(WEST)
+turtle.forward(TARGET_WIDTH)
+turtle.setheading(SOUTH)
+turtle.forward(TARGET_WIDTH)
+turtle.penup()
+
+# Центрировать черепаху.
+turtle.goto(0, 0)
+turtle.setheading(EAST)
+turtle.showturtle()
+turtle.speed(PROJECTILE_SPEED)
+
+# Получить от пользователя угол и силу.
+angle = float(input("Введите угол полета снаряда: "))
+force = float(input("Введите пусковую силу (1-10): "))
+
+# Рассчитать расстояние.
+distance = force * FORCE_FACTOR
+
+# Задать направление.
+turtle.setheading(angle)
+
+# Запустить снаряд.
+turtle.pendown()
+turtle.forward(distance)
+
+# Снаряд поразил цель?
+if (turtle.xcor() >= TARGET_LLEFT_X and
+        turtle.xcor() <= (TARGET_LLEFT_X + TARGET_WIDTH) and
+        turtle.ycor() >= TARGET_LLEFT_Y and
+        turtle.ycor() <= (TARGET_LLEFT_Y + TARGET_WIDTH)):
+    print('Цель поражена!')
+else:
+    print('Вы промахнулись.')
+
+    # Показать подсказки.
+    if turtle.xcor() > (TARGET_LLEFT_X + TARGET_WIDTH):
+        print('Попробуйте угол побольше.')
+    elif turtle.xcor() < TARGET_LLEFT_X:
+        print('Попробуйте угол поменьше.')
+    elif turtle.ycor() > (TARGET_LLEFT_Y + TARGET_WIDTH):
+        print('Попробуйте силу поменьше.')
+    elif turtle.ycor() < TARGET_LLEFT_Y:
+        print('Попробуйте силу побольше.')
